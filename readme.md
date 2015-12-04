@@ -4,9 +4,9 @@ It is mainly inspired by the dotfiles of [jfrazelle](https://github.com/jfrazell
 
 Requirements and warnings:
 * Do not blindly use the files in this repository
-* Set `zsh` as your defaults shell
+* Set `zsh` as your defaults shell and install `oh_my_zsh`
 * Make sure `i3`, `terminator`, `inconsolata-ttf`, ... are installed
- 
+
 
 To install it you need to:
 ```
