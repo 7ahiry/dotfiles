@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+f=`file --mime-type -b $1`
+
+case $f in
+    "application/x-gzip")
+        extract $1;;
+    "application/x-tar")
+        extract $1;;
+    "application/x-rar")
+        extract $1;;
+    "application/zip")
+        extract $1;;
+    "application/pdf")
+        zathura $1;;
+    "application/postscript")
+        zathura $1;;
+    "image/x-eps")
+        zathura $1;;
+    "inode/directory")
+        vifm $1;;
+    *)
+        #xdg-open "$1" &> /home/tahiry/.xsession-errors &;;
+        echo "not working"
+esac
