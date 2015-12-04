@@ -1,0 +1,12 @@
+[Default Applications]
+x-scheme-handler/magnet=transmission-gtk.desktop
+application/pdf=zathura.desktop
+application/postscript=zathura.desktop
+image/x-eps=zathura.desktop
+text/x-tex=gvim.desktop
+text/html=firefox.desktop
+application/epub+zip=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+inode/directory=vifm.desktop
+
