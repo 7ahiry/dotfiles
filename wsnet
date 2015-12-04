@@ -1,0 +1,3 @@
+export PATH=$PATH:$HOME/.local/wsnet-2.0/bin
+export WSNET_MODDIR="$HOME/too/wsnet-module/lib"
+
