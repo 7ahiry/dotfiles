@@ -40,7 +40,7 @@ if [ -f /tmp/wsnet/$moduleName/Makefile.am ]; then
   echo "do not run bootstrap..."
 else
     ln -sf $HOME/too/wsnet-module/user_models/$moduleName/* .
-    cp /home/tahiry/too/wsnet-module/user_models/TOOLS/* .
+    cp $HOME/too/wsnet-module/user_models/TOOLS/* .
   echo Editing $PWD/Makefile.am
   echo lib_LTLIBRARIES = lib${type}_${moduleName}.la > Makefile.am
   echo lib${type}_${moduleName}_la_CFLAGS = "\$(CFLAGS) \$(GLIB_FLAGS) " -Wall >> Makefile.am
@@ -50,7 +50,7 @@ else
   ./bootstrap
   ./configure --prefix=$HOME/too/wsnet-module \
             --libdir=$HOME/too/wsnet-module/lib \
-            --with-wsnet-dir=/home/tahiry/.local/wsnet-2.0
+            --with-wsnet-dir=$HOME/.local/wsnet-2.0
 fi
 
 
