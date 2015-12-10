@@ -120,8 +120,8 @@ alias weather='/home/tahiry/.bin/weather-freebsd-amd64 -l "Lille, France -u si"'
 
 # sshfs
 #
-alias sshmount='sshfs razafind@backup.lille.inria.fr:/home/fun/razafind  /home/tahiry/mnt/'
-alias sshumount='sudo umount /home/tahiry/mnt'
+alias sshmount='sshfs razafind@backup.lille.inria.fr:/home/fun/razafind  /home/tahiry/mnt/ssh'
+alias sshumount='sudo umount /home/tahiry/mnt/ssh'
 
 # Path and shell stuffs
 alias path='echo -e ${PATH//:/\\n}'
@@ -138,3 +138,5 @@ alias sbackup='ssh razafind@backup.lille.inria.fr'
 # Screen aliases
 alias dual='xrandr --output DVI1 --right-of DVI0'
 
+# bittorrent sync
+alias bt='btsync --config /homr/tahiry/.sync/sync.config'
