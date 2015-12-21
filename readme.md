@@ -10,6 +10,12 @@ Requirements and warnings:
 
 To install it you need to:
 ```
+make
+```
+
+or
+
+```
 cd ~
 git clone https://git.framasoft.org/7ahiry/dotfiles.git ~/.dotfiles
 ln -s ~/.dotfiles/aliases ~/.aliases
