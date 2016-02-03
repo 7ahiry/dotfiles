@@ -19,7 +19,7 @@
     use_custom_command = True
     icon_bell = False
     show_titlebar = False
-    font = Inconsolata Medium 8
+    font = Inconsolata Medium 14
     background_color = "#002b36"
     scrollback_infinite = True
 [layouts]

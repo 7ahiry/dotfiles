@@ -541,4 +541,48 @@ function mergepdf(){
     /usr/local/bin/gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="$@";
 }
 
+# Convert pdf toeps
+function pdftoeps(){
+    TARGET=${1%.pdf}.eps
+    echo "pdftops -eps ${1} - | ps2eps > ${TARGET}"
+    pdftops -eps ${1} - | ps2eps > ${TARGET}
+    echo "ps2eps stdout redirected to: ${TARGET}"
+}
+
+# Crop eps
+function epscrop(){
+    pdftool --copy --bbox ${1} /tmp/test.eps > /dev/null
+    mv /tmp/test.eps ${1}
+}
+
+# image manipulation
+function storeimg() {
+    for i in `find . -iname "*.jpg"`; do exiftool -d "/home/tahiry/box/photos/%Y/%m" "-directory<createdate" $i; done
+}
+
+# Change creation date
+# for i in `find . -iname "*.jpg"`; do exiftool -createdate="2004:07:30 12:00:00" $i; done
+
+# http://druidbsd.cvs.sf.net/viewvc/druidbsd/home/bash_profile?revision=1.50&view=markup
+# seems to be useful functions
+# usage quietly yourcommand
+unalias quietly 2> /dev/null
+quietly() { "$@" > /dev/null 2>&1; }
+
+# Add entry to path if not already in
+quietly unalias path_munge
+path_munge()
+{
+        while [ $# -gt 0 ]; do
+                [ ! "$1" ] && shift && continue
+                ( PATH="$PATH:"
+                  while [ "$PATH" ]; do
+                        [ "${PATH%%:*}" = "$1" ] && exit ${SUCCESS:-0}
+                        PATH="${PATH#*:}"
+                  done
+                  exit ${FAILURE:-1}
+                ) || export PATH="$PATH${PATH:+:}$1"
+                shift
+        done
+}
 
