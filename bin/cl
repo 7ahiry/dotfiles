@@ -1,0 +1,17 @@
+#!/bin/sh
+
+export rep_tex="`pwd`"
+
+#if [ -d "${rep_tex}/.git" ]
+#then
+#    echo "git versionning system"
+#    #rm -fr /tmp/tex/`basename "$rep_tex"`
+#    git_tex.sh
+#fi
+
+
+cd /tmp
+mkdir -p tex/`basename "$rep_tex"`
+cd tex/`basename "$rep_tex"`
+ln -sf "$rep_tex"/* .
+rubber "$@"
