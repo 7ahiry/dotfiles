@@ -586,3 +586,37 @@ path_munge()
         done
 }
 
+# ---------- functions {{{
+# usage: is_command go && echo "go is installed"
+# works for functions, builtins, aliases, everything that 'type' can find.
+function is_command() {
+    $(type "$1" &> /dev/null)
+}
+
+function dirsize() {
+    find ${*-.} -maxdepth 1 -type d -exec du -hs '{}' \; 2>/dev/null
+}
+
+function lsize() {
+    local du="du"
+    local sort="sort"
+    ${du} -h --max-depth 1 $* 2>/dev/null | ${sort} -hr
+}
+
+function histostats() {
+    history | awk '{a[$2]++ } END{for(i in a){print a[i] " " i}}' | sort -rn | head
+}
+
+function append_to_path() {
+    if [[ -d "$1" ]] && [[ ! $PATH =~ (^|:)$1(:|$) ]] ; then
+        PATH+=:$1
+    fi
+}
+
+function prepend_to_path() {
+    if [[ -d "$1" ]] && [[ ! $PATH =~ (^|:)$1(:|$) ]] ; then
+        PATH=$1:$PATH
+    fi
+}
+
+# }}}
