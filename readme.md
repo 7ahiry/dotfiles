@@ -34,6 +34,8 @@ ln -s ~/.dotfiles/i3 ~/.i3
 ln -s ~/.dotfiles/bin ~/.bin
 ln -s ~/.dotfiles/irssi ~/.irssi
 
+mkdir .config/terminator
+mkdir -p .local/share/applications
 ln -s ~/.dotfiles/terminator.config ~/.config/terminator/config
 ln -s ~/.dotfiles/user-dirs.dirs ~/.config/user-dirs.dirs
 ln -s ~/.dotfiles/defaults.list ~/.local/share/applications/defaults.list
