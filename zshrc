@@ -57,7 +57,7 @@ plugins=(git jump)
 
 # User configuration
 
-export PATH="/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:$HOME/.bin"
+export PATH="/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/games:/usr/local/sbin:/usr/local/bin:$HOME/.bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -88,3 +88,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source $HOME/.bashrc
 #setxkbmap -layout us -variant altgr-intl
+
+# auto-suggestion
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
