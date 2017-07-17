@@ -40,3 +40,13 @@ ln -s ~/.dotfiles/terminator.config ~/.config/terminator/config
 ln -s ~/.dotfiles/user-dirs.dirs ~/.config/user-dirs.dirs
 ln -s ~/.dotfiles/defaults.list ~/.local/share/applications/defaults.list
 ```
+
+You must install : [zsh autosuggestion](https://github.com/zsh-users/zsh-autosuggestions):
+```
+git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+```
+
+and add the following to your `.zshrc`
+```
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+```
