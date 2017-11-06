@@ -142,12 +142,4 @@ alias  lsdir="tree -d -L 1 -i"
 alias lsdirs="tree -d"
 unset ls_opts ls_sort
 
-## grep family new commands
-# mac: brew tap homebrew/dupes; brew install grep
-alias grep="grep --color=auto --exclude={tags,cscope.out} --binary-files=without-match --exclude-dir={CVS,.bzr,.git,.hg,.svn,_darcs}"
-alias grepcode="grep -R --exclude=* --include=*.{c,C,cc,CC,cpp,h,H,hs,java,pl,properties,py,rb,s,S,scala,sh}"
-alias grepdoc="grep -R --exclude=* --include=*.{adoc,asciidoc,bib,howto,info,markdown,md,text,txt,htm,html,rst,tex,todo,wip}"
-alias grepbuild="grep -R --exclude=* --include=*.{ac,am,in,m4,mk,properties,sh,xml} --include={*akefile,*configure*,GNUmake*}"
-alias grepwhite="grep '[[:space:]]\+$' -R"
-alias g=grepcode
-unset grep
+alias     ss="sudo acpiconf -s 3"

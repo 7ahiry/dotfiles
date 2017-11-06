@@ -1,1 +1,2 @@
-exec i3
+setxkbmap fr
+exec /usr/local/bin/i3

@@ -27,6 +27,7 @@ ln -s ~/.dotfiles/login_conf ~/.login_conf
 
 ln -s ~/.dotfiles/wsnet ~/.wsnet
 ln -s ~/.dotfiles/xinitrc ~/.xinitrc
+ln -s ~/.dotfiles/Xresources ~/.Xresources
 ln -s ~/.dotfiles/zshrc ~/.zshrc
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 
