@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+xrandr --output VGA-1 --mode 1920x1080
+xrandr --output LVDS-1 --right-of VGA-1
