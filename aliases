@@ -142,4 +142,4 @@ alias  lsdir="tree -d -L 1 -i"
 alias lsdirs="tree -d"
 unset ls_opts ls_sort
 
-alias     ss="sudo acpiconf -s 3"
+alias     ss="sudo acpiconf -s 3 && /usr/local/bin/slock"

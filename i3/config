@@ -226,3 +226,13 @@ new_float 1pixel
 
 #bindsym F1 exec xfce4-terminal --drop-down
 #for_window [class="Guake"] floating enable
+
+# launch qutebrowser
+bindsym $mod+b exec /usr/local/bin/qutebrowser
+
+# start rofi (program launcher)
+bindsym $mod+i exec rofi -show drun -width 100 -location 1 -lines 5 -bw 2 -yoffset -2
+# start rofi (window switcher)
+bindsym $mod+u exec rofi -show window -width 100 -location 1 -lines 5 -bw 2 -yoffset -2
+# start rofi (ssh host autocomplete)
+bindsym $mod+y exec rofi -show ssh -width 100 -location 1 -lines 5 -bw 2 -yoffset -2
